@@ -14,4 +14,4 @@ for pdf in pdfs:
     input_pdf = PdfFileReader(pdf)
     output.append(input_pdf)
 
-output.write(output_name) 
+output.write(output_name)
