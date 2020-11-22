@@ -2,9 +2,9 @@ from PyPDF3 import PdfFileReader, PdfFileWriter, PdfFileMerger
 import os
 
 # user defined variables
-directory = "/Users/vishal/Desktop"
-pdfs = ["FromNature_Emerson.pdf","CivilDisobedience_Thoreau.pdf"]
-output_name = "combined.pdf"
+directory = ""
+pdfs = ["",""]
+output_name = ".pdf"
 
 os.chdir(directory)
 
