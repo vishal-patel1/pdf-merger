@@ -1,4 +1,4 @@
-from PyPDF3 import PdfFileReader, PdfFileWriter, PdfFileMerger
+from PyPDF3 import PdfFileReader, PdfFileMerger
 import os
 
 # user defined variables
