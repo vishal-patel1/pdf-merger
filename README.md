@@ -15,14 +15,22 @@
   
 ```python
 # user defined variables
-directory = ""
-pdfs = ["",""]
-output_name = ".pdf"
+directory = "~/Desktop"
+pdfs = ["1.pdf","2.pdf"]
+output_name = "merged.pdf"
 ```
 
 2. Run the program
+
 ```console
 user@lt:~$ python3 pdfMerger.py
+```
+
+3. Find the merged pdf
+
+```console
+user@lt:~$ ls
+merged.pdf
 ```
 
 [1]: https://pypi.org/project/PyPDF3/
