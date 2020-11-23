@@ -5,6 +5,8 @@
 * Python 3 + libraries below
   * [PyPDF3][1]
   * os
+  * lots of tkinter stuff
+  * [ttkthemes][3]
 
 ## Usage
 
@@ -35,3 +37,4 @@ merged.pdf
 
 [1]: https://pypi.org/project/PyPDF3/
 [2]: pdfMerger.py
+[3]: https://ttkthemes.readthedocs.io/en/latest/installation.html
