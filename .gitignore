@@ -6,3 +6,5 @@ settings.json
 .idea
 build
 dist
+pdfMerger.egg-info
+__pycache__
