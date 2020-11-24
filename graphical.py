@@ -5,30 +5,25 @@ outputDirectory = ""
 
 # imports
 try:
-    from ttkthemes import ThemedTk
+    from ttkthemes import ThemedTk 
     from tkinter import ttk
     import tkinter as tk
     from PyPDF3 import PdfFileReader, PdfFileMerger
-    from tkinter import filedialog
     import os
 except ImportError:
-    from ttkthemes import ThemedTk
+    from ttkthemes import ThemedTk 
     from tkinter import ttk
     import tkinter as tk
-    from os import path
     from PyPDF3 import PdfFileReader, PdfFileMerger
-    from tkinter import filedialog
     import os
 
-root = ThemedTk(theme="breeze")
+root = ThemedTk(theme="plastik")
 
 root.geometry('475x400')
 root.title("Merge PDFs")
 root.iconbitmap("icon.icns")
 root.iconphoto(False, tk.PhotoImage(file="images/icon.png"))
 style = ttk.Style(root)
-
-
 
 def open_files():
     global pdfs
