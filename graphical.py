@@ -25,9 +25,9 @@ root = ThemedTk(theme="breeze")
 root.geometry('475x400')
 root.title("Merge PDFs")
 root.iconbitmap("icon.icns")
-root.iconphoto(False, tk.PhotoImage(file="icon.png"))
+root.iconphoto(False, tk.PhotoImage(file="images/icon.png"))
 style = ttk.Style(root)
-ttk.Button(root, text="Quit", command=root.destroy).place(x=340, y=360)
+
 
 
 def open_files():
@@ -95,6 +95,10 @@ def convert():
         textBox.config(text="finished", fg="green")
 
 
+def close():
+    root.destroy()
+
+
 fileOpener = ttk.Button(root, text="Open PDFs", command=open_files)
 fileOpener.place(x=20, y=20)
 
@@ -106,5 +110,7 @@ convertButton.place(x=330, y=20)
 
 textBox = tk.Label(root, font='bold', wraplength=150, justify="center")
 textBox.place(x=135, y=100)
+
+ttk.Button(root, text="Quit", command=close).place(x=340, y=360)
 
 root.mainloop()
