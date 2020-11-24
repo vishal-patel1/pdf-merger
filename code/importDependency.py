@@ -1,11 +1,12 @@
 # imports
-import subprocess, sys, logging
+import subprocess
+import logging
 
 # variables
 dependencies = {
-    'PyPDF3':'PyPDF3',
-    'setuptools':'setuptools',
-    'ttkthemes':'git+https://github.com/RedFantom/ttkthemes'
+    'PyPDF3': 'PyPDF3',
+    'setuptools': 'setuptools',
+    'ttkthemes': 'git+https://github.com/RedFantom/ttkthemes'
 }
 
 logging.basicConfig(

@@ -1,0 +1,9 @@
+README.md
+setup.py
+code/graphical.py
+code/importDependency.py
+pdfMerger.egg-info/PKG-INFO
+pdfMerger.egg-info/SOURCES.txt
+pdfMerger.egg-info/dependency_links.txt
+pdfMerger.egg-info/requires.txt
+pdfMerger.egg-info/top_level.txt

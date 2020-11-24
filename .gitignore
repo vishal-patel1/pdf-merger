@@ -3,3 +3,6 @@ settings.json
 .DS_Store
 .vscode
 *.log
+.idea
+build
+dist
