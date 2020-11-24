@@ -5,12 +5,14 @@ outputDirectory = ""
 
 # imports
 try:
+    import importDependency
     from ttkthemes import ThemedTk 
     from tkinter import ttk, filedialog
     import tkinter as tk
     from PyPDF3 import PdfFileReader, PdfFileMerger
     import os, logging
 except ImportError:
+    import importDependency
     from ttkthemes import ThemedTk 
     from tkinter import ttk, filedialog
     import tkinter as tk
