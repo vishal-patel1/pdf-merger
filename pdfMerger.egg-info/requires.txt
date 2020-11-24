@@ -1,7 +1,0 @@
-logging
-subprocess
-importDependency
-ttkthemes
-tkinter
-PyPDF3
-os
