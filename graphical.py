@@ -6,13 +6,13 @@ outputDirectory = ""
 # imports
 try:
     from ttkthemes import ThemedTk 
-    from tkinter import ttk
+    from tkinter import ttk, filedialog
     import tkinter as tk
     from PyPDF3 import PdfFileReader, PdfFileMerger
     import os
 except ImportError:
     from ttkthemes import ThemedTk 
-    from tkinter import ttk
+    from tkinter import ttk, filedialog
     import tkinter as tk
     from PyPDF3 import PdfFileReader, PdfFileMerger
     import os
@@ -27,12 +27,12 @@ style = ttk.Style(root)
 
 def open_files():
     global pdfs
+
     pdfs = filedialog.askopenfilenames(
         parent=root,
         initialdir='/',
         filetypes=[
             ("pdf", "*.pdf")])
-
     if pdfs == "":
         output = "please select pdfs to merge"
         textBox.config(text=output, fg="red")
@@ -54,16 +54,13 @@ def save_as():
         index = save.rfind('/')
 
         outputDirectory = save[0:index]
-
         fileName = save[index + 1:len(save)]
-
         if ".pdf" in fileName:
             fileName = fileName
         elif ".pdf" not in fileName:
             fileName += ".pdf"
         else:
             fileName = "merge.pdf"
-
         output = "file will be saved at " + outputDirectory + " as " + fileName
         textBox.config(text=output, fg="black")
 
