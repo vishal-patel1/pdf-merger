@@ -18,15 +18,6 @@ except ImportError:
     import tkinter as tk
     from PyPDF3 import PdfFileReader, PdfFileMerger
     import os
-"""
-logging.basicConfig(
-    filename='pdfMerger.log',
-    level=logging.DEBUG,
-    format='%(asctime)s.%(msecs)03d %(levelname)s %(module)s - %(funcName)s: %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S',
-    filemode='a')
-    """
-#logging.info("graphical app has been launched")
 
 root = ThemedTk(theme="plastik")
 
@@ -47,11 +38,9 @@ def open_files():
             ("pdf", "*.pdf")])
     if pdfs == "":
         output = "please select pdfs to merge"
-        #logging.info(output)
         textBox.config(text=output, fg="red")
     else:
         output = "pdfs will be merged"
-        #logging.info("pdfs will be merged")
         textBox.config(text=output, fg="black")
 
 
@@ -63,7 +52,6 @@ def save_as():
         initialdir='/')
     if save == "":
         output = "please pick a location and filename"
-        #logging.info(output)
         textBox.config(text=output, fg="red")
     else:
         index = save.rfind('/')
@@ -77,7 +65,6 @@ def save_as():
         else:
             fileName = "merge.pdf"
         output = "file will be saved at " + outputDirectory + " as " + fileName
-        #logging.info(output)
         textBox.config(text=output, fg="black")
 
 
@@ -86,11 +73,9 @@ def convert():
 
     if outputDirectory == "":
         output = "please select where to save the file and a name"
-        #logging.info(output)
         textBox.config(text=output, fg="red")
     elif pdfs == "":
         output = "please select pdfs to merge"
-        #logging.info(output)
         textBox.config(text=output, fg="red")
     else:
         os.chdir(outputDirectory)
@@ -101,15 +86,12 @@ def convert():
             output.append(input_pdf)
 
         textBox.config(text="writing the combined pdf")
-        #logging.info("writing the combined pdf")
         output.write(fileName)
         textBox.config(text="finished", fg="green")
-        #logging.info("finished")
 
 
 def close():
     root.destroy()
-    #logging.info("graphical app has been closed")
 
 
 fileOpener = ttk.Button(root, text="Open PDFs", command=open_files)
@@ -117,6 +99,9 @@ fileOpener.place(x=20, y=20)
 
 saveAsButton = ttk.Button(root, text="Save as", command=save_as)
 saveAsButton.place(x=175, y=20)
+
+notice = ttk.Label(root, text="To ensure that the pdfs are merged in the proper order, please name the pdfs in alphabetical order.", wraplength=250, justify="center")
+notice.place(x=105, y=130)
 
 convertButton = ttk.Button(root, text="Merge!", command=convert)
 convertButton.place(x=330, y=20)
