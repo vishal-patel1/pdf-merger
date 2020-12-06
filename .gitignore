@@ -7,4 +7,5 @@ settings.json
 build
 dist
 pdfMerger.egg-info
+workspace.code-workspace
 __pycache__
