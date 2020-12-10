@@ -2,38 +2,40 @@
 fileName = ""
 pdfs = []
 outputDirectory = ""
-osType  = ""
+osType = ""
 
 # imports
 try:
     import importDependency
-    from ttkthemes import ThemedTk 
-    from tkinter import ttk, filedialog
+    from tkinter import filedialog
     import tkinter as tk
     from PyPDF3 import PdfFileReader, PdfFileMerger
-    import os, platform
-    from PIL import ImageTk,Image 
+    import os
+    import platform
 except ImportError:
     import importDependency
-    from ttkthemes import ThemedTk 
-    from tkinter import ttk, filedialog
-    from PIL import ImageTk,Image 
+    from tkinter import filedialog
     import tkinter as tk
     from PyPDF3 import PdfFileReader, PdfFileMerger
-    import os, platform
+    import os
+    import platform
 
-root = ThemedTk(theme="plastik")
+root = tk.Tk()
+TK_SILENCE_DEPRECATION = 1
 
 root.geometry('475x400')
 root.title("Merge PDFs")
 
-# TODO add icon back depending on os
-if platform.system()== "Windows":
+# Haven't had much success with this
+"""# TODO add icon to linux test
+if platform.system() == "Windows":
     root.iconphoto(True, tk.PhotoImage(file="./images/icon.png"))
 elif platform.system() == "Darwin":
-    
-#elif platform.system() == "":
+    #root.iconbitmap("images/icon.icns")
+    img = tk.Image("photo", file="images/icon.gif")
+    root.tk.call('wm','iconphoto', root._w, img)
 
+elif platform.system() == "":"""
 
 
 def open_files():
@@ -75,6 +77,7 @@ def save_as():
         output = "file will be saved at " + outputDirectory + " as " + fileName
         textBox.config(text=output, fg="black", justify="center")
 
+
 def convert():
     global outputDirectory
 
@@ -96,26 +99,31 @@ def convert():
         output.write(fileName)
         textBox.config(text="finished", fg="green", justify="center")
 
+
 def close():
     root.destroy()
 
-fileOpener = ttk.Button(root, text="Open PDFs", command=open_files)
+
+fileOpener = tk.Button(root, text="Open PDFs", command=open_files)
 fileOpener.place(x=20, y=20)
 
-saveAsButton = ttk.Button(root, text="Save as", command=save_as)
+saveAsButton = tk.Button(root, text="Save as", command=save_as)
 saveAsButton.place(x=175, y=20)
 
-notice = ttk.Label(root, text="Notices: \n 1) To ensure that the pdfs are merged in the proper order, please name the pdfs in alphabetical order.  \n 2) Before merging pdfs directly from a scanner, open them up with a PDF editor and immediately save the document.", wraplength=250, justify="center")
+notice = tk.Label(root, text="Notices: \n "
+                             "1) To ensure that the pdfs are merged in the proper order, "
+                             "please name the pdfs in alphabetical order.  "
+                             "\n 2) Before merging pdfs directly from a scanner,"
+                             " open them up with a PDF editor and immediately "
+                             "save the document.", wraplength=250, justify="center")
 notice.place(x=105, y=230)
 
-
-
-convertButton = ttk.Button(root, text="Merge!", command=convert)
+convertButton = tk.Button(root, text="Merge!", command=convert)
 convertButton.place(x=330, y=20)
 
-textBox = ttk.Label(root, font='bold', wraplength=150, justify="center")
+textBox = tk.Label(root, font='bold', wraplength=150, justify="center")
 textBox.place(x=135, y=100)
 
-ttk.Button(root, text="Quit", command=close).place(x=340, y=360)
+tk.Button(root, text="Quit", command=close).place(x=370, y=360)
 
 root.mainloop()
