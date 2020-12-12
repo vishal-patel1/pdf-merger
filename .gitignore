@@ -6,6 +6,7 @@ settings.json
 .idea
 build
 dist
+graphical.spec
 pdfMerger.egg-info
 workspace.code-workspace
 __pycache__

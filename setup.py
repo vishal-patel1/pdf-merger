@@ -5,4 +5,5 @@ setup(name="pdfMerger",
     long_description="An app that merges pdfs into one",
     author="Vishal Patel",
     packages=['code'],
-    install_requires=['subprocess', 'importDependency', 'ttkthemes', 'tkinter', 'PyPDF3', 'os'])
+    install_requires=['PyPDF3'],
+    setup_requires=["py2app"])
