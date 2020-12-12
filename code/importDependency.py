@@ -4,8 +4,7 @@ import subprocess
 # variables
 dependencies = {
     'PyPDF3': 'PyPDF3',
-    'setuptools': 'setuptools',
-    'ttkthemes': 'git+https://github.com/RedFantom/ttkthemes'
+    'setuptools': 'setuptools'
 }
 
 # install the apps
