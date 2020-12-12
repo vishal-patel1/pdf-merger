@@ -9,4 +9,3 @@ dist
 pdfMerger.egg-info
 workspace.code-workspace
 __pycache__
-pdf-merger
