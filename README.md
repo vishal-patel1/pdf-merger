@@ -5,7 +5,6 @@
 * Python 3 + libraries below
   * [PyPDF3][1]
   * tkinter 8.6 or above
-  * [ttkthemes][3]
   * setuptools
   * os
 

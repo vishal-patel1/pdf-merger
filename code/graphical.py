@@ -11,31 +11,18 @@ try:
     import tkinter as tk
     from PyPDF3 import PdfFileReader, PdfFileMerger
     import os
-    import platform
 except ImportError:
     import importDependency
     from tkinter import filedialog
     import tkinter as tk
     from PyPDF3 import PdfFileReader, PdfFileMerger
     import os
-    import platform
 
 root = tk.Tk()
 TK_SILENCE_DEPRECATION = 1
 
 root.geometry('475x400')
 root.title("Merge PDFs")
-
-# Haven't had much success with this
-"""# TODO add icon to linux test
-if platform.system() == "Windows":
-    root.iconphoto(True, tk.PhotoImage(file="./images/icon.png"))
-elif platform.system() == "Darwin":
-    #root.iconbitmap("images/icon.icns")
-    img = tk.Image("photo", file="images/icon.gif")
-    root.tk.call('wm','iconphoto', root._w, img)
-
-elif platform.system() == "":"""
 
 
 def open_files():
