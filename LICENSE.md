@@ -4,14 +4,13 @@
 
 The following libraries were made public according to the following license agreements
 
-* [ttkthemes][3] is made available under GNU GPL by this [license][2]
-* [PyPDF3][1] is made available as per the developers' [license agreement][6]
+* [PyPDF3][1] is made available as per the developers' [license agreement][3]
     from tkinter import filedialog
   * This program is also in accordance with their required statement in the documentation of a tool that utilizes their code
     * Copyright (c) 2006-2008, Mathieu Fenniak
     * Some contributions copyright (c) 2007, Ashish Kulkarni <kulkarni.ashish@gmail.com>
     * Some contributions copyright (c) 2014, Steve Witham <switham_github@mac-guyver.com>
-* [Python][4] made this entire project possible
+* [Python][2] made this entire project possible
 
 ## Reproduction
 
@@ -48,7 +47,5 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
 [1]: https://github.com/sfneal/PyPDF3
-[2]: https://github.com/TkinterEP/ttkthemes/blob/master/docs/licenses.rst
-[3]: https://github.com/TkinterEP/ttkthemes
-[4]: https://docs.python.org/3/license.html
-[6]: https://github.com/sfneal/PyPDF3/blob/master/LICENSE
+[2]: https://docs.python.org/3/license.html
+[3]: https://github.com/sfneal/PyPDF3/blob/master/LICENSE
