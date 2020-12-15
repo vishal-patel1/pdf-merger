@@ -22,9 +22,9 @@ or
 user@lt:~$ git clone https://github.com/vishal-patel1/pdf-merger
 ```
 
-or 
+or
 
-![img.png](img.png)
+![downloadImage](https://drive.google.com/uc?export=view&id=1Y8bkkDRuHlbXL4dxUpYauP3PBVeJSefu)
 
 2. Run the program [graphical.py][3] with python3 to launch the GUI application
 
@@ -45,15 +45,16 @@ Now skip to and follow the Execution instructions
 
 1. Now that you launched the program, open some pdfs using the "Open PDFs" button
 
-![img_1.png](img_1.png)
+
+![openImage](https://drive.google.com/uc?export=view&id=1LllroHWKmCHqrzvqW04Y_hz-24o90r9b)
    
 2. Click "Save as" to locate a directory that you want the merged PDF to be and be sure to give it a name!
 
-![img_2.png](img_2.png)
+![saveAsImage](https://drive.google.com/uc?export=view&id=1J7J4kncMhiBhULGd9ft6wFlL1Yb4Vllq)
    
 3. Click "Merge!" to begin building the new, combined PDF
 
-![img_3.png](img_3.png)
+![mergeImage](https://drive.google.com/uc?export=view&id=1S6hLiKwqDZymIOlK7b3S005YNxknQsM9)
 
 ```console
 user@lt:~$ ls
