@@ -1,0 +1,14 @@
+*.pdf
+settings.json
+.DS_Store
+.vscode
+*.log
+.idea
+build
+dist
+graphical.spec
+pdfMerger.egg-info
+workspace.code-workspace
+__pycache__
+.eggs
+venv
